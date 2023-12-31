@@ -4,6 +4,7 @@ const Home = lazy(() => import("./pages/home"));
 const Search = lazy(() => import("./pages/search"));
 const Cart = lazy(() => import("./pages/cart"));
 import Loader from './components/Loader';
+import Header from './components/Header';
 
 
 // Admin imports
@@ -29,6 +30,7 @@ const App = () => {
     return (
         <>
             <Router>
+                <Header />
                 <Suspense fallback={<Loader />}>
                     <Routes>
                         <Route path="/" element={<Home />} />
